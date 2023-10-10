@@ -58,7 +58,7 @@ avengers.map((avenger) => {
 });
 
 //? Objetos (Type Alias)
-type heroId = `${string}-${string}-${string}-${string}-${string}`; // Template union types
+/* type heroId = `${string}-${string}-${string}-${string}-${string}`; // Template union types
 type Hero = {
   readonly id?: heroId
   name: string
@@ -81,5 +81,5 @@ function createHero(hero: Hero): Hero {
   }
 }
 const thor = createHero({ name: "Thor", age: 25, isActive: true });
-
+ */
 
