@@ -58,17 +58,28 @@ avengers.map((avenger) => {
 });
 
 //? Objetos (Type Alias)
+type heroId = `${string}-${string}-${string}-${string}-${string}`; // Template union types
 type Hero = {
-  name: string;
-  age: number;
+  readonly id?: heroId
+  name: string
+  age: number
+  isActive?: boolean // Optional propeties
 }
+
 let hero: Hero = {
   name: "Flash",
   age: 35
 }
 
 function createHero(hero: Hero): Hero {
-  const { name, age } = hero;
-  return { name, age }
+  const { name, age, isActive } = hero;
+  return {
+    id: crypto.randomUUID(),
+    name,
+    age,
+    isActive
+  }
 }
-const thor = createHero({name: "Thor", age: 25});
+const thor = createHero({ name: "Thor", age: 25, isActive: true });
+
+
