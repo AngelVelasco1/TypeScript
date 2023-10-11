@@ -21,3 +21,10 @@ function showError(error: ErrorTypes): void {
     alert("Unknown error");
   }
 }
+
+
+const enum Statee {
+  Active,
+  Inactive,
+  InProgress
+}
