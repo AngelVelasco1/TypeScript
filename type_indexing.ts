@@ -48,4 +48,4 @@ const createPokemon = (name: string, age: number) : { name: string, age: number 
   }
 }
 
-type Pokemon =ReturnType<typeof createPokemon>;
+type Pokemon = ReturnType<typeof createPokemon>;
