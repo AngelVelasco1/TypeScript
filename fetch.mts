@@ -15,7 +15,6 @@ type Todos = {
 };
 type APIResponse = Todos[];
 
-
 try {
   const TODOS = "https://jsonplaceholder.typicode.com/todos";
   const response = await fetch(TODOS);
