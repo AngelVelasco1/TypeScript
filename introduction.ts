@@ -12,10 +12,10 @@ let euler: any = 3.1785;
 euler = "euler";
 
 //? Functions (En las funciones typescript no es capáz de inferir su tipo, por lo que debes definirlo)
-function sum(a: number, b: number) {
+function summ(a: number, b: number) {
   return a + b;
 }
-sum(5, 4);
+summ(5, 4);
 
 //? Tipar objetos
 function sayHello({ name, age }: { name: string; age: number }) {

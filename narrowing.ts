@@ -21,17 +21,22 @@ interface Sonic {
   run: () => void //-> Mario puede usar jump, pero Sonic solo run
 }
 
-type Character = Mario | Sonic
+type CharacterGames = Mario | Sonic
 
 // --> Solucion con un type guard
 
-const CheckIsSonic = (character: Character): character is Sonic  => {
+const CheckIsSonic = (character: CharacterGames): character is Sonic  => {
   return (character as Sonic).run() !== undefined
 }
 
-const play = (character: Character): void =>  {
+const playWithCharacter = (character: CharacterGames): void =>  {
   if (CheckIsSonic(character)) {
     return character.run();
   }
   return character.jump()
 }
+playWithCharacter({
+  name: "Mario",
+  company: 1,
+  run: () => console.log("running"),
+})
